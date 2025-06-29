@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Writer App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Email Writer App</h1>
+    <form id="emailForm">
+      <label>Your Name: <input type="text" id="userName" required /></label>
+      <label>Recipient Company: <input type="text" id="companyName" required /></label>
+      <label>Product Name: <input type="text" id="product" required /></label>
+      <label>Purpose:
+        <select id="purpose">
+          <option value="b2b">B2B Product Inquiry</option>
+          <option value="job">Job Pitch</option>
+          <option value="cold">Cold Outreach</option>
+        </select>
+      </label>
+      <label>Tone:
+        <select id="tone">
+          <option value="professional">Professional</option>
+          <option value="friendly">Friendly</option>
+          <option value="bold">Bold</option>
+        </select>
+      </label>
+      <button type="submit">Generate Email</button>
+    </form>
+    <h2>Your Email</h2>
+    <textarea id="output" rows="12" readonly></textarea>
+    <button onclick="copyToClipboard()">Copy to Clipboard</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
